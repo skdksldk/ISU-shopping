@@ -39,7 +39,7 @@ const RegisterPage = ({ location, history }) => {
 
   return (
     <FormContainer>
-      <Meta title='Sign Up | MOMO' />
+      <Meta title='Sign Up | JUNSOO' />
       <h2>Sign Up</h2>
       {message && (
         <div className='error'>
