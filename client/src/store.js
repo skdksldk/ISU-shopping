@@ -10,7 +10,9 @@ import {
 import {
   productListReducer,
   productDeleteReducer,
-  productCreateReducer
+  productCreateReducer,
+  productDetailsReducer,
+  productReviewCreateReducer
 } from './reducers/productReducers';
 import { logger } from 'redux-logger';
 
@@ -19,8 +21,10 @@ const reducer = combineReducers({
   userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
   productList: productListReducer,
-   productDelete: productDeleteReducer,
-   productCreate: productCreateReducer
+  productDelete: productDeleteReducer,
+  productCreate: productCreateReducer,
+  productDetails: productDetailsReducer,
+  productReviewCreate: productReviewCreateReducer
 });
 
 const userInfoFromStorage = localStorage.getItem('userInfo')

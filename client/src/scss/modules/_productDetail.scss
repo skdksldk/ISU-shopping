@@ -1,0 +1,105 @@
+.productDeatil {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    font-weight: 500;
+    img {
+        width: 500px;
+    }
+    &__description {
+        margin-left: 50px;
+        width: 400px;
+        hr {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .name {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .description {}
+        .in-stock {
+            color: $success-color;
+        }
+        .sold-out {
+            color: $danger-color;
+        }
+        .price {
+            display: flex;
+            .col {
+                margin-right: 1rem;
+            }
+        }
+        .quantity {
+            display: flex;
+            margin-bottom: 20px;
+            .col {
+                margin-right: 1rem;
+            }
+        }
+        &__btn {
+            display: inline-block;
+            font-size: 0.8rem;
+            padding: 12px;
+            color: $dark-color;
+            background-color: $white-color;
+            border: 1px solid #999999;
+            text-align: center;
+            vertical-align: middle;
+            width: 400px;
+            height: 40px;
+            &:hover {
+                border: 1.5px solid;
+                transition-duration: 0.5s;
+            }
+        }
+        .disabled {
+            display: none;
+        }
+    }
+    @include atMobile {
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 300px;
+        }
+        .description-box {
+            width: 280px;
+            margin: 20px 0;
+            .btn {
+                width: 280px;
+            }
+        }
+    }
+    @include atTablets {
+        padding-top: 100px;
+        img {
+            width: 300px;
+        }
+        .description-box {
+            width: 300px;
+            margin: 20px;
+            .btn {
+                width: 300px;
+            }
+        }
+    }
+}
+
+.productDetail__review {
+    margin-top: 3rem;
+    &__content {
+        margin-top: 0.5rem;
+        @include atMobile {
+            flex-direction: column;
+            &__item__content {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+.productDetail__review__create {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}

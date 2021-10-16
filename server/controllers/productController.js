@@ -131,7 +131,7 @@ const updateProduct = asyncHandler(async (req, res) => {
 // @route          POST /api/products/:id/reviews
 // @access         Private
 const createProductReview = asyncHandler(async (req, res) => {
-  const { rating, comment } = req.body;
+  const { comment } = req.body;
 
   const product = await Product.findById(req.params.id);
 
@@ -142,12 +142,11 @@ const createProductReview = asyncHandler(async (req, res) => {
 
     if (alreadyReviewed) {
       res.status(400);
-      throw new Error('Product already reviewed');
+      throw new Error('리뷰가 이미 등록되었습니다');
     }
 
     const review = {
       name: req.user.name,
-      rating: Number(rating),
       comment,
       user: req.user._id,
     };
@@ -156,15 +155,12 @@ const createProductReview = asyncHandler(async (req, res) => {
 
     product.numReviews = product.reviews.length;
 
-    product.rating =
-      product.reviews.reduce((acc, item) => item.rating + acc, 0) /
-      product.reviews.length;
-
+   
     await product.save();
-    res.status(201).json({ message: 'Review added' });
+    res.status(201).json({ message: '리뷰가 추가됨' });
   } else {
     res.status(404);
-    throw new Error('Product not found');
+    throw new Error('상품이 존재하지 않습니다');
   }
 });
 
