@@ -20,7 +20,7 @@ import {
   productUpdateReducer,
   productReviewCreateReducer
 } from './reducers/productReducers';
-
+import { cartReducer } from './reducers/cartReducers';
 
 
 import { logger } from 'redux-logger';
@@ -39,7 +39,8 @@ const reducer = combineReducers({
   productUpdate: productUpdateReducer,
   productCreate: productCreateReducer,
   productDetails: productDetailsReducer,
-  productReviewCreate: productReviewCreateReducer
+  productReviewCreate: productReviewCreateReducer,
+   cart: cartReducer
 });
 
 const userInfoFromStorage = localStorage.getItem('userInfo')

@@ -11,6 +11,7 @@ import ProductDetail from './pages/ProductDetail';
 import SearchPage from './pages/SearchPage';
 import ProductEditPage from './pages/ProductEditPage';
 import UserListPage from './pages/UserListPage';
+import CartPage from './pages/CartPage';
 
 
 
@@ -69,6 +70,7 @@ function App() {
             path='/shop/search/:keyword/page/:pageNumber'
             component={ProductsPage}
           />
+           <Route exact path='/cart/:id?' component={CartPage} />
         </main>
 
       </Router>
