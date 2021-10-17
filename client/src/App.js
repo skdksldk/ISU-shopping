@@ -8,8 +8,10 @@ import ProductsPage from './pages/ProductsPage';
 import ProductManagePage from './pages/ProductManagePage';
 import ProductCreatePage from './pages/ProductCreatePage';
 import ProductDetail from './pages/ProductDetail';
+import SearchPage from './pages/SearchPage';
 import ProductEditPage from './pages/ProductEditPage';
 import UserListPage from './pages/UserListPage';
+
 
 
 function App() {
@@ -56,7 +58,17 @@ function App() {
           />
 
             <Route exact path='/shop/product/:id' component={ProductDetail} />
-         
+               <Route exact path='/shop/search' component={SearchPage} />
+          <Route
+            exact
+            path='/shop/search/:keyword'
+            component={ProductsPage}
+          />
+          <Route
+            exact
+            path='/shop/search/:keyword/page/:pageNumber'
+            component={ProductsPage}
+          />
         </main>
 
       </Router>

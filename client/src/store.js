@@ -39,8 +39,7 @@ const reducer = combineReducers({
   productUpdate: productUpdateReducer,
   productCreate: productCreateReducer,
   productDetails: productDetailsReducer,
-  productReviewCreate: productReviewCreateReducer,
- 
+  productReviewCreate: productReviewCreateReducer
 });
 
 const userInfoFromStorage = localStorage.getItem('userInfo')
