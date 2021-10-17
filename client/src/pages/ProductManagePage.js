@@ -3,11 +3,16 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
-import Paginate from '../components/Paginate';
+import Pagination from '../components/Pagination';
 import { listProducts, deleteProduct } from '../actions/productActions';
 import Meta from '../components/Meta';
+import {
+  faEdit,
+  faTimes
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const ProductListPage = ({ history, match }) => {
+const ProductManagePage = ({ history, match }) => {
   const pageNumber = match.params.pageNumber || 1;
 
   const dispatch = useDispatch();
@@ -42,10 +47,10 @@ const ProductListPage = ({ history, match }) => {
   return (
     <div className='container'>
       <Meta title='Products List | ADMIN PAGE' />
-      <h3 className='admin__list__title'>PRODUCTS</h3>
+      <h3 className='admin__list__title'>상품 관리</h3>
 
       <Link to='/admin/product/create' className='btn'>
-        <i className='fas fa-plus'></i> CREATE PRODUCT
+        상품 추가
       </Link>
 
       <div className='admin__list'>
@@ -62,11 +67,12 @@ const ProductListPage = ({ history, match }) => {
           <table className='admin__list__table'>
             <thead>
               <tr>
-                <th>NO.</th>
-                <th>NAME</th>
-                <th>PRICE</th>
-                <th>CATEGORY</th>
-                <th>BRAND</th>
+                <th>순번</th>
+                <th>이름</th>
+                <th>가격</th>
+                <th>카테고리</th>
+                <th>브랜드</th>
+                <th>수정/삭제</th>
               </tr>
             </thead>
             <tbody>
@@ -82,14 +88,18 @@ const ProductListPage = ({ history, match }) => {
                     <td className='admin__list__btn'>
                       <Link to={`/admin/product/${product._id}/edit`}>
                         <button className='btn admin__list__edit'>
-                          <i className='fas fa-edit'></i>
+                        <FontAwesomeIcon
+                            icon={faEdit}
+                          />
                         </button>
                       </Link>
                       <button
                         className='btn'
                         onClick={() => deleteHandler(product._id)}
                       >
-                        <i className='fas fa-trash'></i>
+                         <FontAwesomeIcon
+                          icon={faTimes}
+                        />
                       </button>
                     </td>
                   </tr>
@@ -99,10 +109,10 @@ const ProductListPage = ({ history, match }) => {
         )}
       </div>
       <div>
-        <Paginate pages={pages} page={page} isAdmin={true} />
+        <Pagination pages={pages} page={page} isAdmin={true} />
       </div>
     </div>
   );
 };
 
-export default ProductListPage;
+export default ProductManagePage;
