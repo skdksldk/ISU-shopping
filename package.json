@@ -29,5 +29,8 @@
     "pug": "2.0.0-beta11",
     "react-paypal-express-checkout": "^1.0.5",
     "require": "^2.4.20"
+  },
+  "devDependencies": {
+    "sass": "^1.49.7"
   }
 }

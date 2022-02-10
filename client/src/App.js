@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
+import Footer from './components/Footer';
 import RegisterPage from './pages/RegisterPage';
 import ProductsPage from './pages/ProductsPage';
 import ProductManagePage from './pages/ProductManagePage';
@@ -82,6 +83,11 @@ function App() {
            <Route exact path='/order/:id' component={OrderCheckPage} />
            <Route exact path='/admin/orderlist' component={OrderListPage} />
         </main>
+
+        <Route
+          path='/'
+          render={({ location }) => location.pathname !== '/' && <Footer />}
+        />
 
       </Router>
     </div>
