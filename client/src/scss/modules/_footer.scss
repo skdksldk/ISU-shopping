@@ -1,5 +1,5 @@
 .footer {
-    /*position: absolute;*/
+    position: relative;
     justify-content: space-between;
     left: 0;
     bottom: 0;
@@ -10,11 +10,14 @@
     color: $dark-color;
     font-size: 0.7rem;
     text-align: left;
-  
+    
+    
+
     ul {
       display: flex;
       list-style: none;
-  
+
+
       li {
         padding: 0 1rem;
         font-size: 0.8rem;
