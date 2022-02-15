@@ -2,7 +2,6 @@
     display: block;
     justify-content: center;
     margin-bottom: 1rem;
-    width: 15%;
     position: fixed;
     margin-top: 8rem;
   
@@ -39,11 +38,7 @@
       font-size: 20px;
       border-bottom: 3px solid;
     }
-  
-    @include atMobile {
-      flex-direction: column;
-    }
-  }
+}
   
   .productList__title {
     font-size: 1.5rem;
@@ -58,10 +53,11 @@
         border-bottom: 1.5px solid;
     }
   }
-  
+
   .rating span {
     /*margin: 0.1rem;*/
   }
+  
   
   .products {
     display: grid;
@@ -77,6 +73,4 @@
         margin-bottom: 0.5rem;
       }
     }
-  
-   
-  }
+}
