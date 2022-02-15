@@ -47,13 +47,13 @@ const ProductManagePage = ({ history, match }) => {
   return (
     <div className='container'>
       <Meta title='Products List | ADMIN PAGE' />
-      <h3 className='admin__list__title'>상품 관리</h3>
+      <h3 className='admin__product__title'>상품 관리</h3>
 
       <Link to='/admin/product/create' className='btn'>
         상품 추가
       </Link>
 
-      <div className='admin__list'>
+      <div className='admin__product'>
         {loadingDelete && <Loader />}
         {errorDelete && <Message className='error'>{errorDelete}</Message>}
 
@@ -64,7 +64,7 @@ const ProductManagePage = ({ history, match }) => {
             <Message>{error}</Message>
           </div>
         ) : (
-          <table className='admin__list__table'>
+          <table className='admin__product__table'>
             <thead>
               <tr>
                 <th>순번</th>
@@ -85,9 +85,9 @@ const ProductManagePage = ({ history, match }) => {
                     <td>{product.category}</td>
                     <td>{product.brand}</td>
 
-                    <td className='admin__list__btn'>
+                    <td className='admin__product__btn'>
                       <Link to={`/admin/product/${product._id}/edit`}>
-                        <button className='btn admin__list__edit'>
+                        <button className='btn admin__product__edit'>
                         <FontAwesomeIcon
                             icon={faEdit}
                           />
