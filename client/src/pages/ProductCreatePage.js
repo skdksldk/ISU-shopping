@@ -72,7 +72,7 @@ const ProductCreatePage = ({ history }) => {
 
   return (
     <FormContainer>
-      <Meta title='Create Product | ADMIN PAGE' />
+      <Meta title='JUN | Create Product' />
       <h3 className='user__list__title'>CREATE PRODUCT</h3>
       {loadingCreate && <Loader />}
       {errorCreate && (

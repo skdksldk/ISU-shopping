@@ -59,7 +59,7 @@ const MyPage = ({ history }) => {
 
   return (
     <div className='container form'>
-      <Meta title={`${user.name}'s My Page`} />
+      <Meta title={`JUN | ${user.name}'s Profile`} />
       <h2>My Page</h2>
       {errorMessage && !success ? (
         <div className='error'>

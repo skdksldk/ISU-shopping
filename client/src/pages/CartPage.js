@@ -31,7 +31,7 @@ const CartPage = ({ match, location, history }) => {
 
   return (
     <div className='container'>
-      <Meta title='Shopping Cart | JUNSOO' />
+      <Meta title='JUN | Cart' />
       <h3 className='cart__title'>장바구니</h3>
       {cartItems.length === 0 ? (
         <div className='error'>

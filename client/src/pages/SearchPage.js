@@ -23,7 +23,7 @@ const SearchPage = ({ match }) => {
 
   return (
     <>
-      <Meta title='Search | JUN' />
+      <Meta title='JUN | Search' />
       <div className='container'>
       <Route render={({ history }) => <SearchForm history={history} />} />
 

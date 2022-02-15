@@ -14,8 +14,8 @@ const Meta = ({ title, description, keywords }) => {
 };
 
 Meta.defaultProps = {
-  title: 'JUN | Contemporary Styled Apparel',
-  description: 'Contemporary Styled Apparel',
+  title: 'JUN | Shopping Mall',
+  description: 'Shopping Mall',
   keywords: 'clothes, clothing, fashion, online shop, fashion store, jun',
 };
 

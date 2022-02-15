@@ -94,7 +94,7 @@ const OrderCheckPage = ({ match, history }) => {
     </div>
   ) : (
     <div className='container'>
-      <Meta title={`Payment Order | ${order._id}`} />
+      <Meta title= 'JUN  |  Order Summary' />
       <h3>주문번호 {order._id}</h3>
       <div className='order'>
         <div>

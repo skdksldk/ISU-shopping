@@ -39,7 +39,7 @@ const UserListPage = ({ history }) => {
 
   return (
     <div className='container'>
-      <Meta title='Users List | ADMIN PAGE' />
+      <Meta title='JUN | Users List' />
       <h3 className='admin__list__title'>사용자 관리</h3>
       <div className='admin__list'>
         {loading ? (

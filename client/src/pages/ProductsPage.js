@@ -26,7 +26,7 @@ const ProductsPage = ({ match }) => {
 
   return (
     <>
-      <Meta title='Shop | JUN' />
+      <Meta title='JUN | Shop' />
       <div className='container'>
     
         <div className='productList__title'>

@@ -27,7 +27,7 @@ const OrderPage = ({ history }) => {
 
   return (
     <FormContainer>
-      <Meta title='Shipping Info | JUNSOO' />
+      <Meta title='JUN | Shipping Info' />
       <CheckoutSteps step1 />
       <h3 className='common__title'>배송</h3>
       <div className='common__form'>

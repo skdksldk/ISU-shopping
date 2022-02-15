@@ -24,7 +24,7 @@ const OrderPayPage = ({ history }) => {
 
   return (
     <div className='container'>
-      <Meta title='Payment Info | JUNSOO' />
+      <Meta title='JUN | Payment Info' />
       <CheckoutSteps step1 step2 />
       <h3 className='form__title'>결재방법 선택</h3>
       <form onSubmit={submitHandler}>
