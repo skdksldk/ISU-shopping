@@ -6,6 +6,7 @@
     padding: 1rem;
     align-items: center;
     margin-top: 10px;
+
     table,
     th,
     td {
@@ -15,22 +16,20 @@
         width: 100%;
         border-collapse: collapse;
     }
+    th {
+        height: 50px;
+    }
+    &__img {
+        margin-top: 10px;
+      }
+      &__content {
+        text-align : left;
+    }
+
     &__a1 {
         width: 50px;
     }
-    /*
-  table {
-    width: 100%;
-    border: 1px solid;
-    border: 1px solid $primary-color;
-    bordercolor : blue;
-    border-collapse: collapse;
-    border: 1px solid black;
-    th,td {
-      border: 1px solid;
-      border: 1px solid black;
-    }
-  }*/
+
     &>* {
         flex-grow: 1;
         flex-basis: 0;
@@ -45,20 +44,14 @@
     .btn {
         font-size: 0.6rem;
     }
-    @include atMobile {
-        flex-direction: column;
-        align-items: center;
-        font-size: 0.4rem;
-        .btn {
-            font-size: 0.4rem;
-            margin: 10px 0;
-        }
-    }
 }
 
 .cart__content {
+    display: flex;
     margin-top: 40px;
     margin-bottom: 4rem;
+    justify-content: center;
+
     .cart__tot {
         margin-top: 10px;
         font-size: 1rem;
@@ -68,11 +61,14 @@
         width: 400px;
         height: 40px;
     }
-    @include atMobile {
-        flex-direction: column;
-        align-items: center;
-        .btn {
-            width: 280px;
-        }
+   
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        justify-content: center;
+    
+      }
+      tr {
+        height: 50px;
+      }
     }
-}
