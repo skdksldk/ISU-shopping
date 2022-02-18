@@ -2,9 +2,9 @@ import asyncHandler from 'express-async-handler';
 import generateToken from '../utils/generateToken.js';
 import User from '../models/userModel.js';
 
-// @description     Auth user & get token
-// @route           POST /api/users/login
-// @access          Public
+/*
+  POST /api/users/login 사용자 확인
+*/
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
@@ -20,13 +20,13 @@ const authUser = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(401);
-    throw new Error('Invalid email or password');
+    throw new Error('유효하지 않은 Email 및 Password 입니다');
   }
 });
 
-// @description     Resgister a new user
-// @route    POST /api/users
-// @access    Public
+/*
+  POST /api/users 사용자 등록
+*/
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -34,7 +34,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
   if (userExists) {
     res.status(400);
-    throw new Error('User already exists');
+    throw new Error('이미 등록된 사용자입니다');
   }
 
   const user = await User.create({
@@ -53,13 +53,13 @@ const registerUser = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(400);
-    throw new Error('Invalid user data');
+    throw new Error('유효하지 않은 사용자 정보입니다');
   }
 });
 
-// @description     Get user profile
-// @route           GET /api/users/profile
-// @access          Private
+/*
+  GET /api/users/profile 프로필 조회
+*/
 const getUserProfile = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id);
 
@@ -72,13 +72,14 @@ const getUserProfile = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(404);
-    throw new Error('User not found');
+    throw new Error('해당 사용자가 존재하지 않습니다');
   }
 });
 
-// @description     Update user profile
-// @route           POST /api/users/profile
-// @access          Private
+
+/*
+  POST /api/users/profile 프로필 수정
+*/
 const updateUserProfile = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id);
 
@@ -99,36 +100,39 @@ const updateUserProfile = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(404);
-    throw new Error('User not found');
+    throw new Error('해당 사용자가 존재하지 않습니다');
   }
 });
 
-// @description   Get all users
-// @route         GET /api/users
-// @access        Private/Admin
+
+/*
+  GET /api/users 모든 사용자목록 조회
+*/
 const getUsers = asyncHandler(async (req, res) => {
   const users = await User.find({});
   res.json(users);
 });
 
-// @description    Delete user
-// @route          DELETE /api/users/:id
-// @access         Private/Admin
+
+/*
+  DELETE /api/users/:id 사용자 삭제
+*/
 const deleteUser = asyncHandler(async (req, res) => {
   const user = await User.findById(req.params.id);
 
   if (user) {
     await user.remove();
-    res.json({ message: 'User removed' });
+    res.json({ message: '사용자가 삭제되었습니다' });
   } else {
     res.status(404);
     throw new Error('User not found');
   }
 });
 
-// @description    Get user by ID
-// @route          GET /api/users/:id
-// @access         Private/Admin
+
+/*
+  GET /api/users/:id 사용자 상세조회
+*/
 const getUserById = asyncHandler(async (req, res) => {
   const user = await User.findById(req.params.id).select('-password');
 
@@ -136,13 +140,14 @@ const getUserById = asyncHandler(async (req, res) => {
     res.json(user);
   } else {
     res.status(404);
-    throw new Error('User not found');
+    throw new Error('해당 사용자가 존재하지 않습니다');
   }
 });
 
-// @description    Update user
-// @route          PUT /api/users/:id
-// @access         Private/Admin
+
+/*
+  PUT /api/users/:id 사용자 수정
+*/
 const updateUser = asyncHandler(async (req, res) => {
   const user = await User.findById(req.params.id);
 
@@ -161,7 +166,7 @@ const updateUser = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(404);
-    throw new Error('User not found');
+    throw new Error('해당 사용자가 존재하지 않습니다');
   }
 });
 
