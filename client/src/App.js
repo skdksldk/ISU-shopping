@@ -14,6 +14,7 @@ import ProductDetail from './pages/ProductDetail';
 import SearchPage from './pages/SearchPage';
 import ProductEditPage from './pages/ProductEditPage';
 import UserListPage from './pages/UserListPage';
+import UserEditPage from './pages/UserEditPage';
 import CartPage from './pages/CartPage';
 import OrderPage from './pages/OrderPage';
 import OrderPayPage from './pages/OrderPayPage';
@@ -34,6 +35,7 @@ function App() {
            <Route exact path='/login' component={LoginPage} />
            <Route exact path='/register' component={RegisterPage} />
            <Route exact path='/profile' component={MyPage} />
+           <Route exact path='/admin/user/:id/edit' component={UserEditPage} />
            <Route exact path='/shop' component={ProductsPage} />
            <Route exact path='/admin/userlist' component={UserListPage} />
            <Route
