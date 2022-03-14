@@ -4,6 +4,13 @@ ISU Shopping은 쇼핑몰을 주제로 E-commerce형태의 웹 서비스를 구�
 
 <br />
 
+## 💻 사이트
+
+> 아래 링크에서 프로젝트 데모 확인이 가능합니다. <br />
+- 🎯 사이트 :https://isu-shopping.herokuapp.com/
+
+<br />
+
 ## 📆 기간
   - 2021.08 ~ 2021.09
 
