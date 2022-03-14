@@ -11,6 +11,17 @@ ISU Shopping은 쇼핑몰을 주제로 E-commerce형태의 웹 서비스를 구�
 
 <br />
 
+
+## ✨시연영상
+
+
+
+https://user-images.githubusercontent.com/29578054/142732497-c404eef4-fe9f-4377-bc92-2ed8b440af7c.mp4
+
+
+
+<br />
+
 ## 📆 기간
   - 2021.08 ~ 2021.09
 
@@ -56,15 +67,7 @@ ISU Shopping은 쇼핑몰을 주제로 E-commerce형태의 웹 서비스를 구�
 <br />
 
 
-## ✨시연영상
 
-
-
-https://user-images.githubusercontent.com/29578054/142732497-c404eef4-fe9f-4377-bc92-2ed8b440af7c.mp4
-
-
-
-<br />
 
 ## ⚡ 반응형 웹
 ![캡처4](https://user-images.githubusercontent.com/29578054/133878855-6b8cee28-d014-4e00-889e-a49fc1b8355a.PNG)
