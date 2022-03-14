@@ -31,7 +31,7 @@ const Header = () => {
     <header>
       <nav className={location.pathname === '/' ? 'nav nav--dark' : 'nav'}>
         <div className='nav__logo'>
-          <Link to='/'>JUNSOO</Link>
+          <Link to='/'>ISU</Link>
         </div>
 
         <button
