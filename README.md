@@ -4,6 +4,11 @@ ISU Shopping은 쇼핑몰을 주제로 E-commerce형태의 웹 서비스를 구�
 
 <br />
 
+## 📆 기간
+  - 2021.08 ~ 2021.09
+
+<br />
+
 ## 📗사용기술
   - Front End
     - React, React hooks, Redux, Redux-thunk, SCSS, JavaScript(ES6+)
